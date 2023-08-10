@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body{
+    background: linear-gradient(135deg, #FFFFFF 0%, #8EA8E0 50%, #144E75 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+}
+
+.titreAccueil{
+    font-size: 3em;
+}
+
+.entreeBilan{
+    /*min-width: 100vw;*/
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+}
+
+.ligneBilan{
+    width: 100vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.ligneBilan:hover{
+    background-color: black;
+    transition: 0.2s all;
+    color : white;
+}
+
+.entreeCreate{
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+}
+
+.ligneCreate{
+    background: linear-gradient(to right, transparent 0%, rgb(255,255,255, 0.5) 50%, transparent 100%);
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-image : linear-gradient(to right, rgb(255,255,255, 0.2) 0%, rgb(255,255,255, 0.8) 50%, rgb(255,255,255, 0.2) 100%) 1 ;
+    width: 100vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.ligneCreate:hover{
+    background-color: white;
+    /*background: linear-gradient(to right, rgb(255,255,255, 0.5) 0%, rgb(255,255,255) 50%, rgb(255,255,255, 0.5) 100%);*/
+    transition: 0.2s all;
+}
+
+@keyframes moveUpAndDown {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.etoile1{
+    animation-name: moveUpAndDown;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.etoile2{
+    animation-name: moveUpAndDown;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.etoile3{
+    animation-name: moveUpAndDown;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.etoile4{
+    animation-name: moveUpAndDown;
+    animation-delay: 0.3s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.etoile5{
+    animation-name: moveUpAndDown;
+    animation-delay: 0.4s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}

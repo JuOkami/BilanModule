@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bilanmodule{% endblock %}
+
+{% block body %}
+    <h1>Bilanmodule</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bilanmodule.id }}</td>
+            </tr>
+            <tr>
+                <th>Formateur</th>
+                <td>{{ bilanmodule.formateur }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ bilanmodule.note }}</td>
+            </tr>
+            <tr>
+                <th>Appreciation</th>
+                <td>{{ bilanmodule.appreciation }}</td>
+            </tr>
+            <tr>
+                <th>Intitule</th>
+                <td>{{ bilanmodule.intitule }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_bilanmodule_index') }}">back to list</a>
+
+    <a href="{{ path('app_bilanmodule_edit', {'id': bilanmodule.id}) }}">edit</a>
+
+    {{ include('bilanmodule/_delete_form.html.twig') }}
+{% endblock %}
