@@ -78,4 +78,21 @@ class BilanmoduleController extends AbstractController
 
         return $this->redirectToRoute('app_bilanmodule_index', [], Response::HTTP_SEE_OTHER);
     }
+
+    #[Route('/editnote/{id}/{note}', name: 'app_bilanmodule_editnote', methods: ['get'])]
+    public function editNote(
+        Bilanmodule $bilanmodule,
+        int $note,
+        EntityManagerInterface $entityManager
+    )
+    : Response
+    {
+        $bilanmodule->setNote($note);
+        $entityManager->persist($bilanmodule);
+        $entityManager->flush();
+
+
+        return $this->redirectToRoute('app_bilanmodule_index', [], Response::HTTP_SEE_OTHER);
+    }
+
 }

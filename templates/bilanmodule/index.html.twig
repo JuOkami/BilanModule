@@ -12,20 +12,26 @@
        {% for bilanmodule in bilanmodules %}
                     <div class="ligneBilan">
                     <a class="entreeBilan" href="{{ path('app_bilanmodule_show', {'id': bilanmodule.id}) }}">
-                       {{ bilanmodule.intitule }} - {{ bilanmodule.formateur }} :
+                       {{ bilanmodule.intitule }} - {{ bilanmodule.formateur }} : {{ "       " }}
 
+                        <div class="ligneEtoiles">
                         {% for i in 1..5 %}
                         {% if i<=bilanmodule.note %}
+                            <a href="{{ path('app_bilanmodule_editnote', {'id' : bilanmodule.id, 'note' : i}) }}">
                             <i class="fa-solid fa-star etoile{{ i }}" style="color: #024f89;"></i>
+                            </a>
                         {% else %}
+                            <a href="{{ path('app_bilanmodule_editnote', {'id' : bilanmodule.id, 'note' : i}) }}">
                             <i class="fa-regular fa-star etoile{{ i }}" style="color: #024f89;"></i>
+                            </a>
                         {% endif %}
                         {% endfor %}
+                        </div>
                     </a>
                     </div>
         {% else %}
 
-                <p>Aucun enregistrement</p>
+                <p class="ligneCreate">Aucun enregistrement</p>
 
         {% endfor %}
 
